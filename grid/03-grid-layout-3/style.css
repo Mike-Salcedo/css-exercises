@@ -120,7 +120,8 @@ li {
   /*My solution*/
 
   display: grid;
-  grid: repeat(3, minmax(150px, 50%)) / repeat(4, minmax(150px, 50%));
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   gap: 15px;
 
