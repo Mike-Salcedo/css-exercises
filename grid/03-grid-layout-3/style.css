@@ -120,7 +120,7 @@ li {
   /*My solution*/
 
   display: grid;
-  grid: repeat(3, minmax(100px, 50%)) / repeat(4, minmax(100px, 50%));
+  grid: repeat(3, minmax(150px, 50%)) / repeat(4, minmax(150px, 50%));
 
   gap: 15px;
 
