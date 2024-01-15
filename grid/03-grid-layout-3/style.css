@@ -3,8 +3,17 @@
   padding: 0;
 }
 
+li {
+  list-style: none; /*my solution */
+}
+
 .container {
   text-align: center;
+  /*My solution*/
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
 }
 
 .container div {
@@ -17,6 +26,31 @@
 
 .header {
   background-color: #393f4d;
+  grid-column: 1 / 3;
+
+  /*My solution*/
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  justify-content: space-between;
+
+  align-content: space-around;
+}
+
+.logo {
+  margin-right: auto; /*my solution */
+}
+.menu {
+  display: grid;
+
+  align-content: center;
+}
+
+.menu ul {
+  display: grid; /*My solution*/
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
 }
 
 .menu ul,
@@ -25,7 +59,15 @@
 }
 
 .sidebar {
-  background-color: #C50208;
+  background-color: #c50208;
+
+  /*My solution*/
+
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 50px;
+
+  grid-row: 2 / 4;
 }
 
 .sidebar .photo {
@@ -34,18 +76,37 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
-}
 
+  /*my solution */
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
 
 .sidebar .side-content {
   background-color: white;
   color: black;
   font-size: 16px;
   font-weight: normal;
+
+  /*my solution */
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .nav {
-  background-color: #C50208;
+  background-color: #c50208;
+
+  /*My solution*/
+  grid-column: 2;
+}
+
+/*My solution*/
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nav ul li {
@@ -55,6 +116,15 @@
 
 .article {
   background-color: #bccbde;
+
+  /*My solution*/
+
+  display: grid;
+  grid: repeat(3, minmax(100px, 50%)) / repeat(4, minmax(100px, 50%));
+
+  gap: 15px;
+
+  grid-column: 2;
 }
 
 .article p {
@@ -65,9 +135,17 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-align: center;
+  height: 200px;
+
+  /*my solution */
+  display: grid;
+  align-content: start;
+  justify-content: center;
+
+  gap: 20px;
 }
 
 .card p {
@@ -83,6 +161,10 @@
 
 .footer {
   background-color: #393f4d;
+
+  /*My solution*/
+  grid-column: 1 / 3;
+  grid-row: 4 / span 2;
 }
 
 .footer p {
